@@ -5,13 +5,14 @@ on: # Запускается при push и pull request файлов .cs в в�
     branches: ["master"]
     paths:
       - "**.cs"
+      - ".github/workflows/**.yml"
   pull_request:
     branches: ["master"]
-    paths:
-      - "**.cs"
+
 jobs:
   build-and-test:
     runs-on: ubuntu-latest # ОС виртуальной машины
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4 # Клонирование репозитория на ВМ
@@ -24,7 +25,8 @@ jobs:
       - name: Restore dependencies
         run: dotnet restore # Восстановление зависимостей
 
-      - name: Build solution # Построение решения
+      - name: Build solution
         run: dotnet build --no-restore --configuration Release
-      - name: Run tests # Запуск тестов
-        run: dotnet test --no-build --configuration Release --verbosity normal
+
+      - name: Run tests and generate TRX log
+        run: dotnet test --no-build --configuration Release --logger "trx;LogFileName=test_results.trx"
