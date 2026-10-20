@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PasswordValidator")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+62faf174b4eba8d055fe10b90aad015619747e22")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bcbdcc0f73808cefabc877743bebfff0d795fef9")]
 [assembly: System.Reflection.AssemblyProductAttribute("PasswordValidator")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PasswordValidator")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
